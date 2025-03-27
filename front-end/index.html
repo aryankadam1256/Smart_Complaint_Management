@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Complaint Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+        <h1>Smart Complaint Management System</h1>
+        <nav>
+            <button onclick="showPage('profile')">Profile</button>
+            <button onclick="showPage('register')">Register Complaint</button>
+            <button onclick="showPage('past')">Past Complaints</button>
+            <button onclick="showPage('nearby')">Nearby Complaints</button>
+            <button onclick="showPage('community')">Community</button>
+        </nav>
+</header>
+
+<main id="main-content">
+        <!-- Profile Page -->
+        <section id="profile" class="page">
+            <h2>Your Profile</h2>
+            <!-- Profile details here -->
+        </section>
+
+        <!-- Register Complaint Page -->
+        <section id="register" class="page" style="display:none;">
+            <h2>Register a Complaint</h2>
+            <form id="complaint-form">
+                <label for="type">Type of Complaint:</label>
+                <select id="type">
+                    <option value="pothole">Pothole</option>
+                    <option value="streetlight">Streetlight</option>
+                    <option value="garbage">Garbage Collection</option>
+                </select>
+
+                <label for="details">Details:</label>
+                <textarea id="details" required></textarea>
+
+                <label for="location">Location (Google Maps link):</label>
+                <input type="url" id="location" required>
+
+                <label for="image">Image URL:</label>
+                <input type="url" id="image">
+
+                <button type="submit">Submit Complaint</button>
+            </form>
+        </section>
+
+        <!-- Past Complaints Page -->
+        <section id="past" class="page" style="display:none;">
+            <h2>Past Complaints</h2>
+            <!-- Display past complaints here -->
+        </section>
+
+        <!-- Nearby Complaints Page -->
+        <section id="nearby" class="page" style="display:none;">
+            <h2>Nearby Complaints</h2>
+            <!-- Display nearby complaints here -->
+        </section>
+
+        <!-- Community Page -->
+        <section id="community" class="page" style="display:none;">
+            <h2>Community Solutions</h2>
+            <!-- Community interaction here -->
+        </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

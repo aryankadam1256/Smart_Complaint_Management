@@ -1,0 +1,111 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e9ecef; /* Light gray background for contrast */
+    color: #343a40; /* Dark text for readability */
+}
+
+/* Header Styles */
+header {
+    background-color: #007BFF; /* Bright blue header */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+header h1 {
+    font-size: 2.5em; /* Larger title size */
+}
+
+/* Navigation Styles */
+nav {
+    margin-top: 10px;
+}
+
+nav button {
+    background-color: #0056b3; /* Darker blue for buttons */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation effects */
+}
+
+nav button:hover {
+    background-color: #004494; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Main Content Styles */
+main {
+    max-width: 800px; /* Limit width for better readability */
+    margin: 20px auto; /* Center the main content */
+    padding: 20px;
+    background-color: white; /* White background for sections */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect */
+}
+
+/* Page Section Styles */
+.page {
+    padding: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+input[type="url"],
+input[type="text"],
+textarea,
+select {
+    padding: 12px; /* Padding for inputs */
+    margin-bottom: 15px; /* Space between inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+    border: 1px solid #ced4da; /* Light border for inputs */
+}
+
+input[type="url"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+}
+
+/* Button Styles for Submit */
+button[type="submit"] {
+    background-color: #28a745; /* Green submit button */
+    color: white;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 1em; /* Consistent button text size */
+}
+
+button[type="submit"]:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav button {
+        width: calc(100% - 10px); /* Full-width buttons on small screens with slight margin adjustment */
+        margin-bottom: 10px; /* Space between buttons on mobile */
+        padding: 12px; /* Increased padding for touch targets */
+        font-size: 1em; /* Consistent font size on mobile devices */
+    }
+}
