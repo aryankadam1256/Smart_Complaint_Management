@@ -1,111 +1,189 @@
-/* Reset some default styles */
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e9ecef; /* Light gray background for contrast */
+    background-color: #f4f7fa; /* Light background for better contrast */
     color: #343a40; /* Dark text for readability */
+    line-height: 1.6; /* Improve text readability */
 }
 
 /* Header Styles */
 header {
     background-color: #007BFF; /* Bright blue header */
     color: white;
-    padding: 20px 0;
+    padding: 30px 0; /* Increased padding for a larger header */
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+header:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 header h1 {
-    font-size: 2.5em; /* Larger title size */
+    font-size: 3em; /* Larger font size for a more prominent title */
+    letter-spacing: 1px; /* Spacing between letters for elegance */
+    font-weight: bold;
+    margin-bottom: 10px; /* Adding margin for spacing */
 }
 
-/* Navigation Styles */
+/* Navigation Styling */
 nav {
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 nav button {
-    background-color: #0056b3; /* Darker blue for buttons */
+    background-color: #0056b3; /* Vibrant blue buttons */
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 0 5px;
+    border-radius: 8px;
+    padding: 15px 25px;
+    margin: 0 10px 15px 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation effects */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.1em; /* Slightly larger font for better readability */
+    text-transform: uppercase; /* Uppercase text for buttons */
 }
 
 nav button:hover {
-    background-color: #004494; /* Darker shade on hover */
-    transform: translateY(-2px); /* Lift effect on hover */
+    background-color: #004494; /* Darker blue on hover */
+    transform: translateY(-6px); /* More pronounced lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect */
 }
 
-/* Main Content Styles */
+nav button:active {
+    transform: translateY(2px); /* Subtle press effect when clicked */
+    box-shadow: none; /* Remove shadow on click */
+}
+
+/* Main Content Section */
 main {
-    max-width: 800px; /* Limit width for better readability */
-    margin: 20px auto; /* Center the main content */
-    padding: 20px;
-    background-color: white; /* White background for sections */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect */
+    max-width: 1000px; /* Wider content for large screens */
+    margin: 40px auto; /* Centered content with spacing */
+    padding: 35px;
+    background-color: #fff;
+    border-radius: 12px; /* Smooth rounded corners */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* Deep shadow for a modern feel */
+    transition: box-shadow 0.3s ease;
 }
 
-/* Page Section Styles */
+main:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15); /* Increased shadow on hover */
+}
+
+/* Page Section Styling */
 .page {
-    padding: 20px;
+    padding: 25px;
+    background-color: #f9f9f9; /* Light gray background for sections */
+    margin-bottom: 25px;
+    border-radius: 8px;
 }
 
-/* Form Styles */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333; /* Darker color for section titles */
+}
+
+/* Form Styling */
 form {
     display: flex;
-    flex-direction: column; /* Stack form elements vertically */
+    flex-direction: column;
+    gap: 20px; /* More space between form elements */
 }
 
 label {
-    margin-bottom: 5px; /* Space between label and input */
+    font-weight: 600;
+    margin-bottom: 5px; /* Clear space between label and input */
+    font-size: 1.1em;
+    color: #555; /* Slightly lighter text for labels */
 }
 
 input[type="url"],
 input[type="text"],
 textarea,
 select {
-    padding: 12px; /* Padding for inputs */
-    margin-bottom: 15px; /* Space between inputs */
-    border-radius: 5px; /* Rounded corners for inputs */
-    border: 1px solid #ced4da; /* Light border for inputs */
+    padding: 15px; /* More padding for larger inputs */
+    font-size: 1em;
+    border-radius: 8px; /* Rounded borders for inputs */
+    border: 1px solid #ced4da; /* Light gray border */
+    background-color: #f9f9f9; /* Light gray background for inputs */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="url"]:focus,
 input[type="text"]:focus,
 textarea:focus,
 select:focus {
-    border-color: #007BFF; /* Highlight border on focus */
+    border-color: #007BFF; /* Highlight border with blue on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); /* Soft shadow on focus */
 }
 
-/* Button Styles for Submit */
+/* Submit Button Styling */
 button[type="submit"] {
     background-color: #28a745; /* Green submit button */
     color: white;
-    border-radius: 5px;
-    padding: 12px;
-    font-size: 1em; /* Consistent button text size */
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button[type="submit"]:hover {
     background-color: #218838; /* Darker green on hover */
+    transform: translateY(-4px); /* Slight lift effect on hover */
+}
+
+button[type="submit"]:active {
+    transform: translateY(2px); /* Pressed effect on click */
+    background-color: #1e7e34; /* Even darker green on click */
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    main {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+
     nav button {
-        width: calc(100% - 10px); /* Full-width buttons on small screens with slight margin adjustment */
-        margin-bottom: 10px; /* Space between buttons on mobile */
-        padding: 12px; /* Increased padding for touch targets */
-        font-size: 1em; /* Consistent font size on mobile devices */
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2em; /* Slightly larger buttons on mobile */
+    }
+
+    form {
+        gap: 25px; /* Increased space between form elements */
+    }
+
+    button[type="submit"] {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2.2em; /* Smaller header for very small screens */
+    }
+
+    nav button {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    form {
+        gap: 30px; /* Larger gap between form elements on mobile */
+    }
+
+    button[type="submit"] {
+        padding: 20px;
     }
 }
